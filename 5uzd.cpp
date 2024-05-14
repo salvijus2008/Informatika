@@ -2,32 +2,35 @@
 
 using namespace std;
 
-int main() {
-    int hours, minutes, seconds;
-
-
-    cout << "Iveskite valandas: ";
-    cin >> hours;
-    cout << "Iveskite minutes: ";
-    cin >> minutes;
-    cout << "Iveskite sekundes: ";
-    cin >> seconds;
-
-
-    int totalSeconds = hours * 3600 + minutes * 60 + seconds;
-
-
-    totalSeconds--;
-
-
-    hours = totalSeconds / 3600;
-    totalSeconds %= 3600;
-    minutes = totalSeconds / 60;
-    seconds = totalSeconds % 60;
-
-
-    cout << "Laikrodis rode " << hours << " val " << minutes << " min " << seconds << " sek pries sekunde." << endl;
-
+int main()
+{
+ int s, m, h;
+ cout<<"sekundes: ";
+ cin>>s;
+ cout<<"minutes: ";
+ cin>>m;
+ cout<<"valandos: ";
+ cin>>h;
+ if(s == 0)
+ {
+     m=m-1;
+     s=59;
+     if(m==-1)
+     {
+         h=h-1;
+         m=59;
+         s=59;
+     }
+ }
+ else
+ {
+     s=s-1;
+ }
+cout<<"valandu: ";
+cout<<h<<endl;
+cout<<"minuciu ";
+cout<<m<<endl;
+cout<<"sekundziu ";
+cout<<s<<endl;
     return 0;
 }
-
